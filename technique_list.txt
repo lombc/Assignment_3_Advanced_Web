@@ -1,0 +1,14 @@
+Advanced Techniques Used:
+
+icon fonts
+nth-child selectors
+:has selector
+calc() function
+2D transforms
+
+perspective
+mix-blend-mode
+object-fit
+columns
+filter
+css shapes
