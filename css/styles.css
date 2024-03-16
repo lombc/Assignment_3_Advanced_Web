@@ -1,20 +1,20 @@
+body {
+  background-color: antiquewhite;
+}
+
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax values as needed */
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust minmax values as needed */
   gap: 10px; /* Adjust the gap between images */
 }
 
 .image-wrapper {
-  width: 100%;
-  height: 0;
-  padding-bottom: 150%; /* 1:1.5 aspect ratio (portrait) */
   position: relative;
+  width: 400px; /* Set fixed width for image wrapper */
+  height: 450px; /* Set fixed height for image wrapper */
 }
 
 .image-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and fill container */
@@ -30,12 +30,23 @@
   color: white;
   font-size: 24px;
   display: none; /* Initially hidden */
+  flex-direction: column; /* Stack h2 and p vertically */
   justify-content: center;
   align-items: center;
+  box-sizing: border-box; /* Ensure overlay dimensions include padding */
   padding: 20px;
 }
 
-/* Show overlay when image is clicked */
-.image-wrapper:target .overlay {
+.overlay h2 {
+  margin-bottom: calc(5px + 5px); /* Add spacing between h2 and p */
+  font-size: calc(0.5em + 0.5em); /* Responsive font size */
+}
+
+.overlay p {
+  font-size: calc(0.3em + 0.3em); /* Responsive font size */
+}
+
+/* Show overlay when anchor link is focused */
+.image-wrapper a:focus + .overlay {
   display: flex;
 }
