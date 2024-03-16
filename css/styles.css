@@ -46,7 +46,36 @@ body {
   font-size: calc(0.3em + 0.3em); /* Responsive font size */
 }
 
-/* Show overlay when anchor link is focused */
 .image-wrapper a:focus + .overlay {
   display: flex;
+}
+
+.show-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.show-button:hover {
+  background-color: #0056b3;
+}
+
+/* description.html */
+
+.planned-result {
+  width: 750px;
+  height: 550px;
+}
+
+.planned-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
